@@ -280,7 +280,6 @@ span {
 
       p {
         @include graph-text(1.5rem);
-        //   width: 90%;
         color: $para;
       }
 
@@ -371,7 +370,7 @@ span {
   }
 
   .header {
-    padding: 0 2rem;
+    padding:2rem;
   }
 
   .home .slide {
