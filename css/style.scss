@@ -10,7 +10,7 @@
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition:all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 $yellow: #ffd43c;
@@ -93,12 +93,14 @@ span {
   &.active {
     background-color: $red;
   }
+
   .navbar {
     a {
       display: inline-block;
       padding: 1.5rem 2rem;
       font-size: 1.7rem;
       color: white;
+
       &:last-child {
         background-color: white;
         padding: 1rem 2rem;
@@ -109,12 +111,14 @@ span {
     }
   }
 }
+
 #menu-btn {
   font-size: 3rem;
   color: white;
   cursor: pointer;
   display: none;
 }
+
 .home {
   height: 100vh;
   color: khaki;
@@ -129,6 +133,7 @@ span {
   flex-grow: 1;
   color: white;
   font-weight: bold;
+
   img {
     margin-top: 3.75rem;
   }
@@ -138,10 +143,11 @@ span {
   .box {
     @include grid(30rem);
     gap: 0;
+
     .content {
       padding: 0 10vw;
       align-self: center;
-      
+
 
       h1 {
         @include title-text(4rem);
@@ -162,6 +168,7 @@ span {
         font-weight: bold;
         text-decoration: underline 0.5rem $yellow !important;
       }
+
       .btn2 {
         font-size: 2rem;
         font-family: "Fraunces", serif;
@@ -173,13 +180,70 @@ span {
 
     .image {
       width: 100%;
-        height: 100%;
-        overflow: hidden;
+      height: 100%;
+      overflow: hidden;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        &:hover{
+
+        &:hover {
+          transform: scale(1.1)
+        }
+      }
+    }
+  }
+
+  .box-2 {
+    @include grid(30rem);
+    gap: 0;
+
+    .content {
+      padding: 0 10vw;
+      align-self: center;
+
+
+      h1 {
+        @include title-text(4rem);
+        font-weight: 800;
+        color: #23303E;
+      }
+
+      p {
+        @include graph-text(1.5rem);
+        margin-top: 1rem;
+        line-height: 1.3;
+      }
+
+      a {
+        font-size: 2rem;
+        font-family: "Fraunces", serif;
+        color: $black;
+        font-weight: bold;
+        text-decoration: underline 0.5rem $yellow !important;
+      }
+
+      .btn2 {
+        font-size: 2rem;
+        font-family: "Fraunces", serif;
+        color: $black;
+        font-weight: bold;
+        text-decoration: underline 0.5rem $red !important;
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &:hover {
           transform: scale(1.1)
         }
       }
@@ -228,6 +292,7 @@ span {
           color: $green;
         }
       }
+
       .content-2 {
         display: flex;
         flex-direction: column;
@@ -255,6 +320,7 @@ span {
     }
   }
 }
+
 .testimonial {
   padding: 10rem 12%;
 
@@ -296,18 +362,22 @@ span {
     }
   }
 }
+
 .gallery {
   @include grid(30rem);
   gap: 0;
+
   div {
     height: 40rem;
     width: 100%;
     overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      &:hover{
+
+      &:hover {
         transform: scale(1.1);
       }
 
@@ -328,11 +398,13 @@ span {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     img {
       color: $green;
       margin: 2rem 0;
       margin-bottom: 3rem;
     }
+
     .navigation {
       a {
         color: #4f9485;
@@ -341,6 +413,7 @@ span {
         margin: 0 3rem;
       }
     }
+
     .icons {
       img {
         color: #4f9485;
@@ -351,9 +424,11 @@ span {
         cursor: pointer;
       }
     }
+
     .attribution {
       @include title-text(1.5rem);
       color: #4f9485;
+
       a {
         color: $green;
       }
@@ -370,7 +445,7 @@ span {
   }
 
   .header {
-    padding:2rem;
+    padding: 2rem;
   }
 
   .home .slide {
@@ -417,9 +492,21 @@ span {
       }
     }
   }
+
+  .about .box-container {
+    .box {
+      .content {
+        padding: 3rem;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   html {
     font-size: 50%;
     text-align: center;
@@ -431,20 +518,52 @@ span {
     background-position: center;
     text-align: center;
   }
+
   .about .box-container {
     .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+
       .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         margin-bottom: 1rem;
         padding: 2rem;
-        h1{
+        h1 {
+          @include title-text(3rem);
+        }
+      }
+    }
+    .box-2 {
+      .content {
+        margin-bottom: 1rem;
+        padding: 2rem;
+        h1 {
           @include title-text(3rem);
         }
       }
     }
   }
-  
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+
+    div {
+      height: 20rem;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+      }
+    }
+  }
 }
