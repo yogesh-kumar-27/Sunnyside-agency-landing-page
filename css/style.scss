@@ -89,7 +89,6 @@ span {
   justify-content: space-between;
   padding: 2rem 9%;
   z-index: 10000;
-
   &.active {
     background-color: $red;
   }
@@ -100,8 +99,11 @@ span {
       padding: 1.5rem 2rem;
       font-size: 1.7rem;
       color: white;
+      font-weight: bold;
 
       &:last-child {
+        font-family: "Barlow", sans-serif;
+        font-family: "Fraunces", serif;
         background-color: white;
         padding: 1rem 2rem;
         border-radius: 5rem;

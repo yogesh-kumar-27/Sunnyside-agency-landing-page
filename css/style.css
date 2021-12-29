@@ -80,9 +80,12 @@ span {
   padding: 1.5rem 2rem;
   font-size: 1.7rem;
   color: white;
+  font-weight: bold;
 }
 
 .header .navbar a:last-child {
+  font-family: "Barlow", sans-serif;
+  font-family: "Fraunces", serif;
   background-color: white;
   padding: 1rem 2rem;
   border-radius: 5rem;
